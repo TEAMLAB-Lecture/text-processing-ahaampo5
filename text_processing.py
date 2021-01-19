@@ -64,8 +64,15 @@ def no_vowels(input_string):
             ''W lv Pythn!'
     """
     no_vowel_string = input_string[:]
-    for i in no_vowel_string[:]:
-        if any([i=='a',i=='e',i=='i',i=='o',i=='u']):
+    answer = ''
+    for i in no_vowel_string:
+        if any([i=='a',i=='e',i=='i',i=='o',i=='u',i=='A',i=='E',i=='I',i=='O',i=='U']):
             no_vowel_string = no_vowel_string.replace(i,'',1)
 
     return no_vowel_string
+
+
+if __name__ == '__main__':
+    print(normalize("This is an example."))
+    print(no_vowels("AEIOU"))
+    print(no_vowels('abcdefghijklmnopqrstuvwxyz'))
